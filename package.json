@@ -1,6 +1,6 @@
 {
   "name": "preact-aplayer",
-  "version": "0.0.1",
+  "version": "0.0.1-rc.1",
   "main": "dist/index.js",
   "license": "MIT",
   "repository": {
