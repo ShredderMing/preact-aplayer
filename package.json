@@ -1,0 +1,21 @@
+{
+  "name": "preact-aplayer",
+  "version": "1.0.0",
+  "main": "build/index.js",
+  "license": "MIT",
+  "scripts": {
+    "build": "babel src -d build"
+  },
+  "dependencies": {
+    "aplayer": "^1.6.0"
+  },
+  "peerDependencies": {
+    "preact": "*"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-plugin-transform-react-jsx": "^6.24.1"
+  }
+}
