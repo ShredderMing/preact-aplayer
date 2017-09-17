@@ -17,6 +17,7 @@ export default {
       presets: [['env', { modules: false, loose: true }]],
       plugins: [
         'transform-class-properties',
+	'transform-object-rest-spread',
         ['transform-react-jsx', { pragma: 'h' }]
       ]
     })

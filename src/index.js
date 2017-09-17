@@ -22,7 +22,7 @@ class Aplayer extends Component {
     theme: '#b7daff'
   };
   componentDidMount() {
-    let ap = (this.state.control = new Player({
+    this.state.control = new Player({
       element: this.el,
       narrow: this.props.narrow,
       autoplay: this.props.autoplay,
@@ -33,17 +33,26 @@ class Aplayer extends Component {
       mode: this.props.mode,
       listmaxheight: this.props.listmaxheight,
       music: this.props.music
-    }));
+    });
 
     for (let key in handleAndEvent) {
       if (this.props[key]) {
-        ap.on(handleAndEvent[key], this.props[key]);
+        this.state.control.on(handleAndEvent[key], this.props[key]);
       }
     }
   }
+  componentWillUnmount() {
+    this.state.control.destroy();
+  }
 
-  render() {
-    return <div class="aplayer" ref={c => (this.el = c)} />;
+  render({ className, ...props }) {
+    return (
+      <div
+        {...props}
+        class={['aplayer', props.class, className].filter(Boolean).join(' ')}
+        ref={c => (this.el = c)}
+      />
+    );
   }
 }
 
