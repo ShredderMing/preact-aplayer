@@ -1,7 +1,7 @@
 {
   "name": "preact-aplayer",
   "amdName": "preactAplayer",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "A Preact wrapper component of APlayer",
   "main": "dist/preact-aplayer.js",
   "minified:main": "dist/preact-aplayer.min.js",
